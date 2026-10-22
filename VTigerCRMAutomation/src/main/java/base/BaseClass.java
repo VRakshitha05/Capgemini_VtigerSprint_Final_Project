@@ -1,3 +1,4 @@
+
 package base;
 
 import java.io.File;
@@ -9,13 +10,16 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
@@ -34,220 +38,217 @@ import utilities.ConfigReader;
 
 public class BaseClass {
 
-	// static: one browser is opened for each <test> and shared by all its test
-	// classes
-	public static WebDriver driver;
+    public static WebDriver driver;
 
-	// page objects, created here so the test classes do not need any setup code
-	public LoginPage lp;
-	public HomePage hp;
-	public CalendarPage calp;
-	public ContactPage cp;
-	public OrganizationPage op;
+    public LoginPage lp;
+    public HomePage hp;
+    public CalendarPage calp;
+    public ContactPage cp;
+    public OrganizationPage op;
 
-	@BeforeTest(alwaysRun = true)
-	@Parameters("browser")
-	public void launchBrowser(@Optional("chrome") String browser) {
+    @BeforeTest(alwaysRun = true)
+    @Parameters("browser")
+    public void launchBrowser(@Optional("chrome") String browser) {
 
-		if (ConfigReader.get("password").equals("CHANGE_ME")) {
-			throw new RuntimeException("Set your real password in src/main/resources/config.properties");
-		}
+        String password = ConfigReader.get("password");
 
-		if (browser.equalsIgnoreCase("chrome")) {
+        if (password == null || password.trim().isEmpty()
+                || password.equals("CHANGE_ME")) {
+            throw new RuntimeException(
+                "Set your valid password in config.properties"
+            );
+        }
 
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-notifications");
+        if (browser.equalsIgnoreCase("chrome")) {
 
-			Map<String, Object> prefs = new HashMap<String, Object>();
-			prefs.put("credentials_enable_service", false);
-			prefs.put("profile.password_manager_enabled", false);
-			prefs.put("profile.password_manager_leak_detection", false);
-			options.setExperimentalOption("prefs", prefs);
+            ChromeOptions options = new ChromeOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+            options.addArguments("--disable-notifications");
 
-			driver = new ChromeDriver(options);
+            Map<String, Object> prefs = new HashMap<>();
+            prefs.put("credentials_enable_service", false);
+            prefs.put("profile.password_manager_enabled", false);
+            prefs.put("profile.password_manager_leak_detection", false);
+            options.setExperimentalOption("prefs", prefs);
 
-		} else if (browser.equalsIgnoreCase("firefox")) {
+            driver = new ChromeDriver(options);
 
-			driver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("firefox")) {
 
-		} else if (browser.equalsIgnoreCase("edge")) {
+            FirefoxOptions options = new FirefoxOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+            driver = new FirefoxDriver(options);
 
-			driver = new EdgeDriver();
+        } else if (browser.equalsIgnoreCase("edge")) {
 
-		} else {
-			throw new RuntimeException("Invalid browser: " + browser);
-		}
+            EdgeOptions options = new EdgeOptions();
+            options.setPageLoadStrategy(PageLoadStrategy.EAGER);
+            options.addArguments("--disable-notifications");
+            driver = new EdgeDriver(options);
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		driver.get(ConfigReader.get("url"));
+        } else {
+            throw new RuntimeException("Unsupported browser: " + browser);
+        }
 
-		Reporter.log("Browser opened: " + browser, true);
-	}
+        driver.manage().window().maximize();
 
-	// runs once for every test class: creates the page objects and logs in
-	@BeforeClass(alwaysRun = true)
-	public void login() {
-		lp = new LoginPage(driver);
-		hp = new HomePage(driver);
-		calp = new CalendarPage(driver);
-		cp = new ContactPage(driver);
-		op = new OrganizationPage(driver);
+        driver.manage().timeouts()
+              .pageLoadTimeout(Duration.ofSeconds(45));
 
-		loginToApplication();
-	}
+        driver.manage().timeouts()
+              .scriptTimeout(Duration.ofSeconds(30));
 
-	// runs before every test method, but only does something for LoginTest.
-	// It makes sure the login page is really on the screen. It never throws.
-	@BeforeMethod(alwaysRun = true)
-	public void prepareLoginPage() {
-		if (!getClass().getSimpleName().equals("LoginTest")) {
-			return;
-		}
+        driver.get(ConfigReader.get("url"));
 
-		try {
-			// already on the login page, nothing to do
-			if (isLoginPageNow()) {
-				return;
-			}
+        Reporter.log("Browser opened: " + browser, true);
+    }
 
-			// 1st try: normal logout, then WAIT so the logout request can finish
-			try {
-				lp.logout();
-				Thread.sleep(3000);
-			} catch (Exception e) {
-				Reporter.log("prepareLoginPage: logout click failed: " + e.getMessage(), true);
-			}
-			lp.openLoginPage();
-			if (waitForLoginPage(10)) {
-				return;
-			}
+    @BeforeClass(alwaysRun = true)
+    public void initializePagesAndLogin() {
 
-			// 2nd try: remove the session cookies
-			driver.manage().deleteAllCookies();
-			driver.get(ConfigReader.get("url"));
-			if (waitForLoginPage(10)) {
-				return;
-			}
+        lp = new LoginPage(driver);
+        hp = new HomePage(driver);
+        calp = new CalendarPage(driver);
+        cp = new ContactPage(driver);
+        op = new OrganizationPage(driver);
 
-			// 3rd try: call the Vtiger logout URL directly
-			driver.get(ConfigReader.get("url") + "index.php?module=Users&action=Logout");
-			Thread.sleep(3000);
-			driver.manage().deleteAllCookies();
-			driver.get(ConfigReader.get("url"));
-			if (!waitForLoginPage(10)) {
-				Reporter.log("prepareLoginPage problem: login page is still not displayed", true);
-			}
-		} catch (Exception e) {
-			Reporter.log("prepareLoginPage problem: " + e, true);
-		}
-	}
+        if (!getClass().getSimpleName().equals("LoginTest")) {
+            loginToApplication();
+        }
+    }
 
-	// checks the login page once, without waiting
-	private boolean isLoginPageNow() {
-		try {
-			return lp.isLoginPageDisplayed();
-		} catch (Exception e) {
-			return false;
-		}
-	}
+    @BeforeMethod(alwaysRun = true)
+    public void prepareLoginTest() {
 
-	// checks the logged in state once, without throwing
-	private boolean isLoggedInNow() {
-		try {
-			return lp.isLoggedIn();
-		} catch (Exception e) {
-			return false;
-		}
-	}
+        if (!getClass().getSimpleName().equals("LoginTest")) {
+            return;
+        }
 
-	// logs in with up to 3 attempts. Each attempt waits for the login page,
-	// and a failed attempt clears the cookies so the next one starts clean.
-	public void loginToApplication() {
+        try {
+            if (lp.isLoginPageDisplayed()) {
+                return;
+            }
+        } catch (Exception ignored) {
+            // Open the login page below.
+        }
 
-		String lastProblem = "no problem recorded";
+        lp.openLoginPage();
 
-		for (int attempt = 1; attempt <= 3; attempt++) {
-			try {
-				lp.openLoginPage();
+        if (!waitForLoginPage(15)) {
+            driver.manage().deleteAllCookies();
+            lp.openLoginPage();
+        }
+    }
 
-				// the session may already be active (Home page opened instead of login page)
-				if (isLoggedInNow()) {
-					Reporter.log("Logged in to Vtiger", true);
-					return;
-				}
+    public void loginToApplication() {
 
-				if (!waitForLoginPage(20)) {
-					lastProblem = "login page did not appear";
-					Reporter.log("Login attempt " + attempt + " failed: " + lastProblem, true);
-					driver.manage().deleteAllCookies();
-					continue;
-				}
+        String username = ConfigReader.get("username");
+        String password = ConfigReader.get("password");
+        String lastError = "Login page or home page was not displayed";
 
-				lp.login(ConfigReader.get("username"), ConfigReader.get("password"));
-				Thread.sleep(3000);
+        for (int attempt = 1; attempt <= 3; attempt++) {
 
-				if (isLoggedInNow()) {
-					Reporter.log("Logged in to Vtiger", true);
-					return;
-				}
+            try {
+                if (lp.isLoggedIn()) {
+                    Reporter.log("Already logged in to VTiger.", true);
+                    return;
+                }
 
-				lastProblem = "Home page was not displayed after entering the credentials";
-				Reporter.log("Login attempt " + attempt + " failed: " + lastProblem, true);
-				driver.manage().deleteAllCookies();
+                lp.openLoginPage();
 
-			} catch (Exception e) {
-				lastProblem = e.toString();
-				Reporter.log("Login attempt " + attempt + " failed: " + lastProblem, true);
-				try {
-					driver.manage().deleteAllCookies();
-				} catch (Exception ignored) {
-					// browser problem, the next attempt will show it
-				}
-			}
-		}
+                if (!waitForLoginPage(15)) {
+                    lastError = "Login page did not appear";
+                    driver.manage().deleteAllCookies();
+                    continue;
+                }
 
-		Assert.fail("Login failed after 3 attempts (" + lastProblem
-				+ ") - check the url, username and password in config.properties");
-	}
+                lp.login(username, password);
 
-	// waits up to the given seconds for the login page to appear
-	public boolean waitForLoginPage(int seconds) {
-		for (int i = 0; i < seconds; i++) {
-			try {
-				if (lp.isLoginPageDisplayed()) {
-					return true;
-				}
-			} catch (Exception e) {
-				// page still loading, try again
-			}
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				Thread.currentThread().interrupt();
-			}
-		}
-		return false;
-	}
+                if (lp.waitForLoggedIn(20)) {
+                    Reporter.log("Logged in to VTiger.", true);
+                    return;
+                }
 
-	// saves a screenshot in the "screenshots" folder (used by the negative tests)
-	public void takeScreenshot(String fileName) {
-		try {
-			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			Files.createDirectories(Paths.get("screenshots"));
-			Path target = Paths.get("screenshots", fileName + ".png");
-			Files.copy(src.toPath(), target, StandardCopyOption.REPLACE_EXISTING);
-			Reporter.log("Screenshot saved: " + target.toAbsolutePath(), true);
-		} catch (Exception e) {
-			Reporter.log("Could not take screenshot: " + e.getMessage(), true);
-		}
-	}
+                lastError = "Home page did not appear after login";
 
-	@AfterTest(alwaysRun = true)
-	public void closeBrowser() {
-		if (driver != null) {
-			driver.quit();
-			Reporter.log("Browser closed", true);
-		}
-	}
+            } catch (Exception e) {
+                lastError = e.getMessage();
+                Reporter.log(
+                    "Login attempt " + attempt + " failed: " + lastError,
+                    true
+                );
+            }
+
+            try {
+                driver.manage().deleteAllCookies();
+            } catch (Exception ignored) {
+                // Continue to the next attempt.
+            }
+        }
+
+        Assert.fail("VTiger login failed: " + lastError);
+    }
+
+    public boolean waitForLoginPage(int seconds) {
+
+        long end = System.currentTimeMillis() + seconds * 1000L;
+
+        while (System.currentTimeMillis() < end) {
+            try {
+                if (lp.isLoginPageDisplayed()) {
+                    return true;
+                }
+            } catch (Exception ignored) {
+                // Page may still be loading.
+            }
+
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+
+        return false;
+    }
+
+    public void takeScreenshot(String fileName) {
+
+        try {
+            File source = ((TakesScreenshot) driver)
+                .getScreenshotAs(OutputType.FILE);
+
+            Files.createDirectories(Paths.get("screenshots"));
+
+            Path target = Paths.get("screenshots", fileName + ".png");
+
+            Files.copy(
+                source.toPath(),
+                target,
+                StandardCopyOption.REPLACE_EXISTING
+            );
+
+            Reporter.log(
+                "Screenshot saved: " + target.toAbsolutePath(),
+                true
+            );
+
+        } catch (Exception e) {
+            Reporter.log(
+                "Screenshot failed: " + e.getMessage(),
+                true
+            );
+        }
+    }
+
+    @AfterTest(alwaysRun = true)
+    public void closeBrowser() {
+
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+            Reporter.log("Browser closed.", true);
+        }
+    }
 }

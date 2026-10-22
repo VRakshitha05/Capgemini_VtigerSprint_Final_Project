@@ -6,10 +6,11 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="login"/>
-          <include name="invalidLogin_Test"/>
+          <include name="blankPassword_Test"/>
+          <include name="prepareLoginTest"/>
+          <include name="logoutThenOpenHome_Test"/>
           <include name="launchBrowser"/>
-          <include name="prepareLoginPage"/>
+          <include name="initializePagesAndLogin"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- tests.LoginTest -->

@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [System Suite]" guice-stage="DEVELOPMENT">
+<suite name="Failed suite [All Test Cases]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
-  <test thread-count="5" name="System Tests(failed)">
-    <groups>
-      <run>
-        <include name="System"/>
-      </run>
-    </groups>
+  <test thread-count="5" name="All Tests(failed)">
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="login"/>
+          <include name="blankPassword_Test"/>
+          <include name="prepareLoginTest"/>
           <include name="logoutThenOpenHome_Test"/>
           <include name="launchBrowser"/>
-          <include name="prepareLoginPage"/>
+          <include name="initializePagesAndLogin"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
-  </test> <!-- System Tests(failed) -->
-</suite> <!-- Failed suite [System Suite] -->
+  </test> <!-- All Tests(failed) -->
+</suite> <!-- Failed suite [All Test Cases] -->

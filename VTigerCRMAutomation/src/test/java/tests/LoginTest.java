@@ -1,3 +1,4 @@
+
 package tests;
 
 import org.testng.Assert;
@@ -12,95 +13,176 @@ public class LoginTest extends BaseClass {
 
     ExcelUtility eu = new ExcelUtility();
 
-    @Test(priority = 1, groups = {"Smoke", "Positive"}, description = "TC01 Login with valid credentials")
-    public void validLogin_Test() throws Exception {
+    private void ensureLoginPage() {
 
-        lp.login(ConfigReader.get("username"), ConfigReader.get("password"));
-        Thread.sleep(3000);
+        if (lp.isLoginPageDisplayed()) {
+            return;
+        }
 
-        Assert.assertTrue(lp.isLoggedIn(), "Home page was not displayed");
+        lp.logout();
 
-        Reporter.log("Login successful with valid username and password", true);
+        if (waitForLoginPage(10)) {
+            return;
+        }
+
+        driver.manage().deleteAllCookies();
+        lp.openLoginPage();
+
+        Assert.assertTrue(
+            waitForLoginPage(15),
+            "Login page could not be opened"
+        );
     }
 
-    @Test(priority = 2, groups = {"Negative"}, description = "TC02 Login with invalid username and password")
+    @Test(
+        priority = 1,
+        groups = {"Smoke", "Positive"},
+        description = "TC01 Login with valid credentials"
+    )
+    public void validLogin_Test() {
+
+        ensureLoginPage();
+
+        lp.login(
+            ConfigReader.get("username"),
+            ConfigReader.get("password")
+        );
+
+        Assert.assertTrue(
+            lp.waitForLoggedIn(20),
+            "Home page was not displayed after valid login"
+        );
+
+        Reporter.log("TC01: Valid login successful", true);
+    }
+
+    @Test(
+        priority = 2,
+        groups = {"Negative"},
+        description = "TC02 Login with invalid credentials"
+    )
     public void invalidLogin_Test() throws Exception {
 
-        String username = eu.getDataFromExcel("Login", 1, 1);
-        String password = eu.getDataFromExcel("Login", 1, 2);
+        ensureLoginPage();
 
-        lp.login(username, password);
-        Thread.sleep(3000);
+        String user = eu.getDataFromExcel("Login", 1, 1);
+        String pass = eu.getDataFromExcel("Login", 1, 2);
+
+        lp.login(user, pass);
+
+
+Assert.assertTrue(
+    waitForLoginPage(10),
+    "Login form should remain visible after blank-password submission"
+);
+
+
         takeScreenshot("TC02_InvalidLogin");
 
-        Assert.assertTrue(waitForLoginPage(10), "User should stay on the login page");
-
-        Reporter.log("Login not allowed for invalid username and password", true);
+        Reporter.log("TC02: Invalid login rejected", true);
     }
 
-    @Test(priority = 3, groups = {"Negative"}, description = "TC03 Login with blank username")
+    @Test(
+        priority = 3,
+        groups = {"Negative"},
+        description = "TC03 Login with blank username"
+    )
     public void blankUsername_Test() throws Exception {
 
-        String username = eu.getDataFromExcel("Login", 2, 1);
-        String password = eu.getDataFromExcel("Login", 2, 2);
+        ensureLoginPage();
 
-        lp.login(username, password);
-        Thread.sleep(3000);
+        String user = eu.getDataFromExcel("Login", 2, 1);
+        String pass = eu.getDataFromExcel("Login", 2, 2);
+
+        lp.login(user, pass);
+
+        Assert.assertTrue(
+            lp.isLoginPageDisplayed(),
+            "Login page should remain displayed after blank username"
+        );
+
         takeScreenshot("TC03_BlankUsername");
 
-        Assert.assertTrue(lp.isLoginPageDisplayed(), "User should stay on the login page");
-
-        Reporter.log("Login not allowed when username is blank", true);
+        Reporter.log("TC03: Blank username rejected", true);
     }
 
-    @Test(priority = 4, groups = {"Negative"}, description = "TC04 Login with blank password")
+    @Test(
+        priority = 4,
+        groups = {"Negative"},
+        description = "TC04 Login with blank password"
+    )
     public void blankPassword_Test() throws Exception {
 
-        String username = eu.getDataFromExcel("Login", 3, 1);
-        String password = eu.getDataFromExcel("Login", 3, 2);
+        ensureLoginPage();
 
-        lp.login(username, password);
-        Thread.sleep(3000);
+        String user = eu.getDataFromExcel("Login", 3, 1);
+        String pass = eu.getDataFromExcel("Login", 3, 2);
+
+        lp.login(user, pass);
+
+        Assert.assertTrue(
+        	    waitForLoginPage(10),
+        	    "Login page should remain displayed after blank password"
+        	);
+
         takeScreenshot("TC04_BlankPassword");
 
-        Assert.assertTrue(lp.isLoginPageDisplayed(), "User should stay on the login page");
-
-        Reporter.log("Login not allowed when password is blank", true);
+        Reporter.log("TC04: Blank password rejected", true);
     }
 
-    @Test(priority = 5, groups = {"System", "Positive"}, description = "TC05 Home page is not accessible after logout")
-    public void logoutThenOpenHome_Test() throws Exception {
 
-        // make sure we start on the login page (the setup may have left another page open)
-        if (!waitForLoginPage(5)) {
-            lp.openLoginPage();
-            Assert.assertTrue(waitForLoginPage(10), "Login page was not displayed before the test");
-        }
+@Test(
+    priority = 5,
+    groups = {"System", "Positive"},
+    description = "TC05 Home page inaccessible after logout"
+)
+public void logoutThenOpenHome_Test() {
 
-        lp.login(ConfigReader.get("username"), ConfigReader.get("password"));
-        Thread.sleep(3000);                      // let the Home page finish loading
-        Assert.assertTrue(lp.isLoggedIn(), "Login failed");
-        Reporter.log("Logged in", true);
+    // First, make sure the login page is available
+    ensureLoginPage();
 
-        // 1st attempt: click Sign Out
-        try {
-            lp.logout();
-        } catch (Exception e) {
-            Reporter.log("Logout click failed: " + e.getMessage(), true);
-        }
-        Thread.sleep(3000);                      // let the logout finish
+    // Login with valid credentials
+    lp.login(
+        ConfigReader.get("username"),
+        ConfigReader.get("password")
+    );
 
-        // 2nd attempt: if the login page is not shown yet, call the Vtiger logout action
-        if (!waitForLoginPage(5)) {
-            Reporter.log("Login page not shown after the click, calling the logout URL", true);
-            driver.get(ConfigReader.get("url") + "index.php?module=Users&action=Logout");
-            Thread.sleep(3000);
-        }
+    Assert.assertTrue(
+        lp.waitForLoggedIn(20),
+        "Login failed before logout test"
+    );
 
-        // after logout the Home page must not open without a login
-        driver.get(ConfigReader.get("url") + "index.php?module=Home&action=index");
-        Assert.assertTrue(waitForLoginPage(20), "Login page should be shown after logout");
+    // Logout from VTiger
+    lp.logout();
 
-        Reporter.log("Logged out, Home page is not opened without login", true);
+    // Wait for the login page after logout
+    boolean loginPageDisplayed = waitForLoginPage(15);
+
+    // If it is not detected, reopen the login URL and check again
+    if (!loginPageDisplayed) {
+        lp.openLoginPage();
+        loginPageDisplayed = waitForLoginPage(15);
     }
+
+    Assert.assertTrue(
+        loginPageDisplayed,
+        "Login page was not displayed after logout"
+    );
+
+    // Try to access Home after logout
+    driver.get(
+        ConfigReader.get("url")
+            + "index.php?module=Home&action=index"
+    );
+
+    Assert.assertTrue(
+        waitForLoginPage(15),
+        "Login page should appear when accessing Home after logout"
+    );
+
+    Reporter.log(
+        "TC05: Home page inaccessible after logout",
+        true
+    );
+}
 }
