@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CrossBrowser]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Chrome Tests(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankPassword_Test"/>
+          <include name="invalidLogin_Test"/>
+          <include name="validLogin_Test"/>
+          <include name="logoutThenOpenHome_Test"/>
+          <include name="blankUsername_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.OrganizationTest">
+        <methods>
+          <include name="listLoads_Test"/>
+          <include name="login"/>
+          <include name="blankName_Test"/>
+          <include name="createValidOrg_Test"/>
+          <include name="invalidEmail_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="deleteWithoutSelection_Test"/>
+          <include name="closeBrowser"/>
+          <include name="organizationLifecycle_Test"/>
+        </methods>
+      </class> <!-- tests.OrganizationTest -->
+      <class name="tests.CalendarTest">
+        <methods>
+          <include name="assignToAnotherUser_Test"/>
+          <include name="removeInviteUser_Test"/>
+          <include name="login"/>
+          <include name="addInviteUser_Test"/>
+          <include name="calendarLoads_Test"/>
+          <include name="addMenuOptions_Test"/>
+          <include name="createMeeting_Test"/>
+          <include name="blankEventName_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+          <include name="assignedToDefault_Test"/>
+          <include name="pastStartDate_Test"/>
+        </methods>
+      </class> <!-- tests.CalendarTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="login"/>
+          <include name="launchBrowser"/>
+          <include name="homePageLoads_Test"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.ContactTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankLastName_Test"/>
+          <include name="listLoads_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="massEditContact_Test"/>
+          <include name="closeBrowser"/>
+          <include name="createContactForOrganization_Test"/>
+          <include name="sendMailToContact_Test"/>
+        </methods>
+      </class> <!-- tests.ContactTest -->
+    </classes>
+  </test> <!-- Chrome Tests(failed) -->
+  <test thread-count="5" name="Firefox Tests(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankPassword_Test"/>
+          <include name="validLogin_Test"/>
+          <include name="invalidLogin_Test"/>
+          <include name="logoutThenOpenHome_Test"/>
+          <include name="blankUsername_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.OrganizationTest">
+        <methods>
+          <include name="listLoads_Test"/>
+          <include name="login"/>
+          <include name="blankName_Test"/>
+          <include name="createValidOrg_Test"/>
+          <include name="invalidEmail_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+          <include name="deleteWithoutSelection_Test"/>
+          <include name="organizationLifecycle_Test"/>
+        </methods>
+      </class> <!-- tests.OrganizationTest -->
+      <class name="tests.CalendarTest">
+        <methods>
+          <include name="removeInviteUser_Test"/>
+          <include name="assignToAnotherUser_Test"/>
+          <include name="login"/>
+          <include name="addInviteUser_Test"/>
+          <include name="calendarLoads_Test"/>
+          <include name="addMenuOptions_Test"/>
+          <include name="createMeeting_Test"/>
+          <include name="blankEventName_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+          <include name="assignedToDefault_Test"/>
+          <include name="pastStartDate_Test"/>
+        </methods>
+      </class> <!-- tests.CalendarTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="login"/>
+          <include name="launchBrowser"/>
+          <include name="homePageLoads_Test"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.ContactTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankLastName_Test"/>
+          <include name="listLoads_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="massEditContact_Test"/>
+          <include name="closeBrowser"/>
+          <include name="createContactForOrganization_Test"/>
+          <include name="sendMailToContact_Test"/>
+        </methods>
+      </class> <!-- tests.ContactTest -->
+    </classes>
+  </test> <!-- Firefox Tests(failed) -->
+  <test thread-count="5" name="Edge Tests(failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankPassword_Test"/>
+          <include name="invalidLogin_Test"/>
+          <include name="validLogin_Test"/>
+          <include name="logoutThenOpenHome_Test"/>
+          <include name="blankUsername_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.OrganizationTest">
+        <methods>
+          <include name="listLoads_Test"/>
+          <include name="login"/>
+          <include name="blankName_Test"/>
+          <include name="createValidOrg_Test"/>
+          <include name="invalidEmail_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="deleteWithoutSelection_Test"/>
+          <include name="closeBrowser"/>
+          <include name="organizationLifecycle_Test"/>
+        </methods>
+      </class> <!-- tests.OrganizationTest -->
+      <class name="tests.CalendarTest">
+        <methods>
+          <include name="removeInviteUser_Test"/>
+          <include name="assignToAnotherUser_Test"/>
+          <include name="login"/>
+          <include name="addInviteUser_Test"/>
+          <include name="calendarLoads_Test"/>
+          <include name="addMenuOptions_Test"/>
+          <include name="createMeeting_Test"/>
+          <include name="blankEventName_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+          <include name="assignedToDefault_Test"/>
+          <include name="pastStartDate_Test"/>
+        </methods>
+      </class> <!-- tests.CalendarTest -->
+      <class name="tests.HomePageTest">
+        <methods>
+          <include name="login"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="homePageLoads_Test"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.ContactTest">
+        <methods>
+          <include name="login"/>
+          <include name="blankLastName_Test"/>
+          <include name="listLoads_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="massEditContact_Test"/>
+          <include name="createContactForOrganization_Test"/>
+          <include name="closeBrowser"/>
+          <include name="sendMailToContact_Test"/>
+        </methods>
+      </class> <!-- tests.ContactTest -->
+    </classes>
+  </test> <!-- Edge Tests(failed) -->
+</suite> <!-- Failed suite [CrossBrowser] -->

@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>TestNG:  Functional Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Oct 22 18:25:30 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>232 seconds (232451 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>Functional </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.CalendarTest.addInviteUser_Test()'><b>addInviteUser_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC18 Add a user in the Invite tab<br/>
+<a href="#Output-569305423" onClick='toggleBox("Output-569305423", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-569305423" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-569305423">
+User added in the Invite tab: Bill Gates<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>tests.CalendarTest@6743e411</td></tr>
+<tr>
+<td title='tests.ContactTest.sendMailToContact_Test()'><b>sendMailToContact_Test</b><br>Test class: tests.ContactTest<br>Test method: TC30 Send mail to a contact<br/>
+<a href="#Output-387137936" onClick='toggleBox("Output-387137936", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-387137936" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-387137936">
+Contact created: QA_Mail_938317<br/>
+Select Email IDs popup opened<br/>
+Compose E-Mail window opened<br/>
+Mail subject typed: QA Test Mail<br/>
+Contact deleted: QA_Mail_938317<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>tests.ContactTest@477b4cdf</td></tr>
+<tr>
+<td title='tests.CalendarTest.removeInviteUser_Test()'><b>removeInviteUser_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC19 Remove a user from the Invite tab<br/>
+<a href="#Output-2096808863" onClick='toggleBox("Output-2096808863", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2096808863" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2096808863">
+User added in the Invite tab: Bill Gates<br/>
+User removed from the Invite tab: Bill Gates<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>tests.CalendarTest@6743e411</td></tr>
+<tr>
+<td title='tests.OrganizationTest.createValidOrg_Test()'><b>createValidOrg_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC21 Create organization with valid data<br/>
+<a href="#Output-925955862" onClick='toggleBox("Output-925955862", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-925955862" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-925955862">
+Organization created with all details: QA_Org_Full_875303<br/>
+Organization deleted: QA_Org_Full_875303<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>tests.OrganizationTest@3eb25e1a</td></tr>
+<tr>
+<td title='tests.CalendarTest.addMenuOptions_Test()'><b>addMenuOptions_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC12 Add button shows Call, Meeting and To Do<br/>
+<a href="#Output-1504321715" onClick='toggleBox("Output-1504321715", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1504321715" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1504321715">
+Add menu shows Call, Meeting and To Do<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.CalendarTest@6743e411</td></tr>
+<tr>
+<td title='tests.CalendarTest.createMeeting_Test()'><b>createMeeting_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC13 Create a Meeting event with valid data<br/>
+<a href="#Output-629016615" onClick='toggleBox("Output-629016615", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-629016615" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-629016615">
+Meeting created: QA_Meeting_92532 on 2026-11-22<br/>
+</div>
+</td>
+<td></td>
+<td>17</td>
+<td>tests.CalendarTest@6743e411</td></tr>
+<tr>
+<td title='tests.ContactTest.massEditContact_Test()'><b>massEditContact_Test</b><br>Test class: tests.ContactTest<br>Test method: TC29 Mass edit the title of a contact<br/>
+<a href="#Output-2053555034" onClick='toggleBox("Output-2053555034", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2053555034" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2053555034">
+Contact created: QA_MassEdit_900569<br/>
+Mass Edit popup opened<br/>
+Title changed by mass edit to: Senior QA<br/>
+Contact deleted: QA_MassEdit_900569<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>tests.ContactTest@477b4cdf</td></tr>
+<tr>
+<td title='tests.CalendarTest.assignedToDefault_Test()'><b>assignedToDefault_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC16 Assigned To is the logged in user by default<br/>
+<a href="#Output-955743449" onClick='toggleBox("Output-955743449", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-955743449" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-955743449">
+Assigned To is the logged in user: ACOE Fireflink<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.CalendarTest@6743e411</td></tr>
+</table><p>
+</body>
+</html>

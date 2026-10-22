@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [System Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="System Tests(failed)">
+    <groups>
+      <run>
+        <include name="System"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="login"/>
+          <include name="logoutThenOpenHome_Test"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- System Tests(failed) -->
+</suite> <!-- Failed suite [System Suite] -->

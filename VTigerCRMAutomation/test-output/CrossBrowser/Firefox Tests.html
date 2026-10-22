@@ -1,0 +1,424 @@
+<html>
+<head>
+<title>TestNG:  Firefox Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Firefox Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Oct 22 18:09:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>428 seconds (428355 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.LoginTest.blankUsername_Test()'><b>blankUsername_Test</b><br>Test class: tests.LoginTest<br>Test method: TC03 Login with blank username<br/>
+<a href="#Output-443006437" onClick='toggleBox("Output-443006437", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-443006437" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-443006437">
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC03_BlankUsername.png<br/>
+Login not allowed when username is blank<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>tests.LoginTest@63475ace</td></tr>
+<tr>
+<td title='tests.OrganizationTest.deleteWithoutSelection_Test()'><b>deleteWithoutSelection_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC25 Click Delete without selecting a record<br/>
+<a href="#Output-1363229954" onClick='toggleBox("Output-1363229954", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1363229954" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1363229954">
+Alert shown: Please select at least one entity<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC25_DeleteWithoutSelection.png<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+<tr>
+<td title='tests.LoginTest.blankPassword_Test()'><b>blankPassword_Test</b><br>Test class: tests.LoginTest<br>Test method: TC04 Login with blank password<br/>
+<a href="#Output-703311663" onClick='toggleBox("Output-703311663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-703311663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-703311663">
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC04_BlankPassword.png<br/>
+Login not allowed when password is blank<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.LoginTest@63475ace</td></tr>
+<tr>
+<td title='tests.OrganizationTest.createValidOrg_Test()'><b>createValidOrg_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC21 Create organization with valid data<br/>
+<a href="#Output-1577442626" onClick='toggleBox("Output-1577442626", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1577442626" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1577442626">
+Organization created with all details: QA_Org_Full_4170<br/>
+Organization deleted: QA_Org_Full_4170<br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+<tr>
+<td title='tests.LoginTest.invalidLogin_Test()'><b>invalidLogin_Test</b><br>Test class: tests.LoginTest<br>Test method: TC02 Login with invalid username and password<br/>
+<a href="#Output-1520808879" onClick='toggleBox("Output-1520808879", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1520808879" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1520808879">
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC02_InvalidLogin.png<br/>
+Login not allowed for invalid username and password<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.LoginTest@63475ace</td></tr>
+<tr>
+<td title='tests.CalendarTest.assignToAnotherUser_Test()'><b>assignToAnotherUser_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC17 Create event assigned to another user<br/>
+<a href="#Output-1273939873" onClick='toggleBox("Output-1273939873", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1273939873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1273939873">
+Meeting QA_Assign_52649 assigned to user: Bill Gates<br/>
+</div>
+</td>
+<td></td>
+<td>12</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.ContactTest.blankLastName_Test()'><b>blankLastName_Test</b><br>Test class: tests.ContactTest<br>Test method: TC27 Create contact with blank last name<br/>
+<a href="#Output-1511202524" onClick='toggleBox("Output-1511202524", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1511202524" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1511202524">
+Alert shown: Last Name cannot be empty<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC27_BlankLastName.png<br/>
+Contact not created because the last name is blank<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.ContactTest@6913c1fb</td></tr>
+<tr>
+<td title='tests.ContactTest.createContactForOrganization_Test()'><b>createContactForOrganization_Test</b><br>Test class: tests.ContactTest<br>Test method: TC28 Create contact for an organization<br/>
+<a href="#Output-216833827" onClick='toggleBox("Output-216833827", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-216833827" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-216833827">
+Organization created: QA_Org_Contact_104105<br/>
+Organization selected for the contact: QA_Org_Contact_104105<br/>
+Contact created for the organization: QA_Contact_110071 -> QA_Org_Contact_104105<br/>
+Contact found in the list with its organization name<br/>
+Contact deleted: QA_Contact_110071<br/>
+Organization deleted: QA_Org_Contact_104105<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>tests.ContactTest@6913c1fb</td></tr>
+<tr>
+<td title='tests.LoginTest.logoutThenOpenHome_Test()'><b>logoutThenOpenHome_Test</b><br>Test class: tests.LoginTest<br>Test method: TC05 Home page is not accessible after logout<br/>
+<a href="#Output-1185843580" onClick='toggleBox("Output-1185843580", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1185843580" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1185843580">
+Logged in<br/>
+Logged out, Home page is not opened without login<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>tests.LoginTest@63475ace</td></tr>
+<tr>
+<td title='tests.ContactTest.massEditContact_Test()'><b>massEditContact_Test</b><br>Test class: tests.ContactTest<br>Test method: TC29 Mass edit the title of a contact<br/>
+<a href="#Output-590578720" onClick='toggleBox("Output-590578720", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-590578720" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-590578720">
+Contact created: QA_MassEdit_145185<br/>
+Mass Edit popup opened<br/>
+Title changed by mass edit to: Senior QA<br/>
+Contact deleted: QA_MassEdit_145185<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>tests.ContactTest@6913c1fb</td></tr>
+<tr>
+<td title='tests.CalendarTest.addMenuOptions_Test()'><b>addMenuOptions_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC12 Add button shows Call, Meeting and To Do<br/>
+<a href="#Output-1369913459" onClick='toggleBox("Output-1369913459", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1369913459" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1369913459">
+Add menu shows Call, Meeting and To Do<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.HomePageTest.homePageLoads_Test()'><b>homePageLoads_Test</b><br>Test class: tests.HomePageTest<br>Test method: TC06 Home page loads after login<br/>
+<a href="#Output-1745174877" onClick='toggleBox("Output-1745174877", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1745174877" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1745174877">
+Home page opened and menu is displayed<br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>tests.HomePageTest@4988d8b8</td></tr>
+<tr>
+<td title='tests.CalendarTest.assignedToDefault_Test()'><b>assignedToDefault_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC16 Assigned To is the logged in user by default<br/>
+<a href="#Output-321068667" onClick='toggleBox("Output-321068667", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-321068667" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-321068667">
+Assigned To is the logged in user: ACOE Fireflink<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.OrganizationTest.listLoads_Test()'><b>listLoads_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC20 Organizations list page loads<br/>
+<a href="#Output-218181144" onClick='toggleBox("Output-218181144", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-218181144" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-218181144">
+Organizations list opened<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+<tr>
+<td title='tests.ContactTest.sendMailToContact_Test()'><b>sendMailToContact_Test</b><br>Test class: tests.ContactTest<br>Test method: TC30 Send mail to a contact<br/>
+<a href="#Output-1848607630" onClick='toggleBox("Output-1848607630", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1848607630" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1848607630">
+Contact created: QA_Mail_175949<br/>
+Select Email IDs popup opened<br/>
+Compose E-Mail window opened<br/>
+Mail subject typed: QA Test Mail<br/>
+Contact deleted: QA_Mail_175949<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>tests.ContactTest@6913c1fb</td></tr>
+<tr>
+<td title='tests.OrganizationTest.blankName_Test()'><b>blankName_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC22 Create organization with blank name<br/>
+<a href="#Output-420398953" onClick='toggleBox("Output-420398953", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-420398953" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-420398953">
+Alert shown: Organization Name cannot be empty<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC22_BlankOrgName.png<br/>
+Organization not created because the name is blank<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+<tr>
+<td title='tests.LoginTest.validLogin_Test()'><b>validLogin_Test</b><br>Test class: tests.LoginTest<br>Test method: TC01 Login with valid credentials<br/>
+<a href="#Output-967635335" onClick='toggleBox("Output-967635335", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-967635335" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-967635335">
+Login successful with valid username and password<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>tests.LoginTest@63475ace</td></tr>
+<tr>
+<td title='tests.CalendarTest.blankEventName_Test()'><b>blankEventName_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC14 Save event with blank Event Name<br/>
+<a href="#Output-418490394" onClick='toggleBox("Output-418490394", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-418490394" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-418490394">
+Alert shown: Missing Event Name<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC14_BlankEventName.png<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.CalendarTest.pastStartDate_Test()'><b>pastStartDate_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC15 Planned event with a past start date<br/>
+<a href="#Output-1585430546" onClick='toggleBox("Output-1585430546", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1585430546" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1585430546">
+Alert shown: Start Date & Time should be greater than or equal to Current date & time for Activities with status as Planned<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC15_PastStartDate.png<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.CalendarTest.removeInviteUser_Test()'><b>removeInviteUser_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC19 Remove a user from the Invite tab<br/>
+<a href="#Output-1998598990" onClick='toggleBox("Output-1998598990", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1998598990" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1998598990">
+User added in the Invite tab: Bill Gates<br/>
+User removed from the Invite tab: Bill Gates<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.ContactTest.listLoads_Test()'><b>listLoads_Test</b><br>Test class: tests.ContactTest<br>Test method: TC26 Contacts list page loads<br/>
+<a href="#Output-1482169014" onClick='toggleBox("Output-1482169014", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1482169014" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1482169014">
+Contacts list opened<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>tests.ContactTest@6913c1fb</td></tr>
+<tr>
+<td title='tests.CalendarTest.calendarLoads_Test()'><b>calendarLoads_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC11 Calendar page loads<br/>
+<a href="#Output-2123557282" onClick='toggleBox("Output-2123557282", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2123557282" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2123557282">
+Calendar page opened<br/>
+</div>
+</td>
+<td></td>
+<td>6</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.CalendarTest.addInviteUser_Test()'><b>addInviteUser_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC18 Add a user in the Invite tab<br/>
+<a href="#Output-905879757" onClick='toggleBox("Output-905879757", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-905879757" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-905879757">
+User added in the Invite tab: Bill Gates<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.CalendarTest.createMeeting_Test()'><b>createMeeting_Test</b><br>Test class: tests.CalendarTest<br>Test method: TC13 Create a Meeting event with valid data<br/>
+<a href="#Output-1695127472" onClick='toggleBox("Output-1695127472", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1695127472" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1695127472">
+Meeting created: QA_Meeting_19686 on 2026-11-22<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>tests.CalendarTest@c0c2f8d</td></tr>
+<tr>
+<td title='tests.OrganizationTest.invalidEmail_Test()'><b>invalidEmail_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC23 Create organization with invalid email<br/>
+<a href="#Output-981341120" onClick='toggleBox("Output-981341120", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-981341120" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-981341120">
+Alert shown: Please enter a valid Email (EMAIL)<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC23_InvalidOrgEmail.png<br/>
+Organization not created because the email is invalid<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+<tr>
+<td title='tests.OrganizationTest.organizationLifecycle_Test()'><b>organizationLifecycle_Test</b><br>Test class: tests.OrganizationTest<br>Test method: TC24 Create, search, edit and delete an organization<br/>
+<a href="#Output-766452561" onClick='toggleBox("Output-766452561", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-766452561" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-766452561">
+Organization created: QA_Org_Life_34121<br/>
+Organization found in the list: QA_Org_Life_34121<br/>
+Organization edited: QA_Org_Life_34121 changed to QA_Org_Life_34121_Edited<br/>
+Edited organization found in the list: QA_Org_Life_34121_Edited<br/>
+Organization deleted: QA_Org_Life_34121_Edited<br/>
+Organization is no longer in the list<br/>
+</div>
+</td>
+<td></td>
+<td>41</td>
+<td>tests.OrganizationTest@305b7c14</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Negative Suite">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Negative Tests">
+        <groups>
+            <run>
+                <include name="Negative"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.HomePageTest"/>
+            <class name="tests.CalendarTest"/>
+            <class name="tests.OrganizationTest"/>
+            <class name="tests.ContactTest"/>
+        </classes>
+    </test>
+</suite>

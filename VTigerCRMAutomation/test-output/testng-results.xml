@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Browser opened: chrome]]>
+    </line>
+    <line>
+      <![CDATA[Logged in to Vtiger]]>
+    </line>
+    <line>
+      <![CDATA[Login successful with valid username and password]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC02_InvalidLogin.png]]>
+    </line>
+    <line>
+      <![CDATA[Login not allowed for invalid username and password]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC03_BlankUsername.png]]>
+    </line>
+    <line>
+      <![CDATA[Login not allowed when username is blank]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC04_BlankPassword.png]]>
+    </line>
+    <line>
+      <![CDATA[Login not allowed when password is blank]]>
+    </line>
+    <line>
+      <![CDATA[Logged in]]>
+    </line>
+    <line>
+      <![CDATA[Logged out, Home page is not opened without login]]>
+    </line>
+    <line>
+      <![CDATA[Logged in to Vtiger]]>
+    </line>
+    <line>
+      <![CDATA[Home page opened and menu is displayed]]>
+    </line>
+    <line>
+      <![CDATA[Logged in to Vtiger]]>
+    </line>
+    <line>
+      <![CDATA[Calendar page opened]]>
+    </line>
+    <line>
+      <![CDATA[Add menu shows Call, Meeting and To Do]]>
+    </line>
+    <line>
+      <![CDATA[Meeting created: QA_Meeting_26567 on 2026-11-22]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Missing Event Name]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC14_BlankEventName.png]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Start Date & Time should be greater than or equal to Current date & time for Activities with status as Planned]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC15_PastStartDate.png]]>
+    </line>
+    <line>
+      <![CDATA[Assigned To is the logged in user: ACOE Fireflink]]>
+    </line>
+    <line>
+      <![CDATA[Meeting QA_Assign_57516 assigned to user: Bill Gates]]>
+    </line>
+    <line>
+      <![CDATA[User added in the Invite tab: Bill Gates]]>
+    </line>
+    <line>
+      <![CDATA[User added in the Invite tab: Bill Gates]]>
+    </line>
+    <line>
+      <![CDATA[User removed from the Invite tab: Bill Gates]]>
+    </line>
+    <line>
+      <![CDATA[Logged in to Vtiger]]>
+    </line>
+    <line>
+      <![CDATA[Organizations list opened]]>
+    </line>
+    <line>
+      <![CDATA[Organization created with all details: QA_Org_Full_132264]]>
+    </line>
+    <line>
+      <![CDATA[Organization deleted: QA_Org_Full_132264]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Organization Name cannot be empty]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC22_BlankOrgName.png]]>
+    </line>
+    <line>
+      <![CDATA[Organization not created because the name is blank]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Please enter a valid Email (EMAIL)]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC23_InvalidOrgEmail.png]]>
+    </line>
+    <line>
+      <![CDATA[Organization not created because the email is invalid]]>
+    </line>
+    <line>
+      <![CDATA[Organization created: QA_Org_Life_159264]]>
+    </line>
+    <line>
+      <![CDATA[Organization found in the list: QA_Org_Life_159264]]>
+    </line>
+    <line>
+      <![CDATA[Organization edited: QA_Org_Life_159264 changed to QA_Org_Life_159264_Edited]]>
+    </line>
+    <line>
+      <![CDATA[Edited organization found in the list: QA_Org_Life_159264_Edited]]>
+    </line>
+    <line>
+      <![CDATA[Organization deleted: QA_Org_Life_159264_Edited]]>
+    </line>
+    <line>
+      <![CDATA[Organization is no longer in the list]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Please select at least one entity]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC25_DeleteWithoutSelection.png]]>
+    </line>
+    <line>
+      <![CDATA[Logged in to Vtiger]]>
+    </line>
+    <line>
+      <![CDATA[Contacts list opened]]>
+    </line>
+    <line>
+      <![CDATA[Alert shown: Last Name cannot be empty]]>
+    </line>
+    <line>
+      <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC27_BlankLastName.png]]>
+    </line>
+    <line>
+      <![CDATA[Contact not created because the last name is blank]]>
+    </line>
+    <line>
+      <![CDATA[Organization created: QA_Org_Contact_261612]]>
+    </line>
+    <line>
+      <![CDATA[Organization selected for the contact: QA_Org_Contact_261612]]>
+    </line>
+    <line>
+      <![CDATA[Contact created for the organization: QA_Contact_268084 -> QA_Org_Contact_261612]]>
+    </line>
+    <line>
+      <![CDATA[Contact found in the list with its organization name]]>
+    </line>
+    <line>
+      <![CDATA[Contact deleted: QA_Contact_268084]]>
+    </line>
+    <line>
+      <![CDATA[Organization deleted: QA_Org_Contact_261612]]>
+    </line>
+    <line>
+      <![CDATA[Contact created: QA_MassEdit_308304]]>
+    </line>
+    <line>
+      <![CDATA[Mass Edit popup opened]]>
+    </line>
+    <line>
+      <![CDATA[Title changed by mass edit to: Senior QA]]>
+    </line>
+    <line>
+      <![CDATA[Contact deleted: QA_MassEdit_308304]]>
+    </line>
+    <line>
+      <![CDATA[Contact created: QA_Mail_342339]]>
+    </line>
+    <line>
+      <![CDATA[Select Email IDs popup opened]]>
+    </line>
+    <line>
+      <![CDATA[Compose E-Mail window opened]]>
+    </line>
+    <line>
+      <![CDATA[Mail subject typed: QA Test Mail]]>
+    </line>
+    <line>
+      <![CDATA[Contact deleted: QA_Mail_342339]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2026-10-22T19:47:39 IST" name="All Test Cases" finished-at="2026-10-22T19:59:38 IST" duration-ms="719359">
+    <groups>
+      <group name="Functional">
+        <method signature="CalendarTest.addMenuOptions_Test()[pri:2, instance:tests.CalendarTest@6989da5e]" name="addMenuOptions_Test" class="tests.CalendarTest"/>
+        <method signature="OrganizationTest.createValidOrg_Test()[pri:2, instance:tests.OrganizationTest@385c9627]" name="createValidOrg_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.createMeeting_Test()[pri:3, instance:tests.CalendarTest@6989da5e]" name="createMeeting_Test" class="tests.CalendarTest"/>
+        <method signature="ContactTest.massEditContact_Test()[pri:4, instance:tests.ContactTest@139982de]" name="massEditContact_Test" class="tests.ContactTest"/>
+        <method signature="ContactTest.sendMailToContact_Test()[pri:5, instance:tests.ContactTest@139982de]" name="sendMailToContact_Test" class="tests.ContactTest"/>
+        <method signature="CalendarTest.assignedToDefault_Test()[pri:6, instance:tests.CalendarTest@6989da5e]" name="assignedToDefault_Test" class="tests.CalendarTest"/>
+        <method signature="CalendarTest.addInviteUser_Test()[pri:8, instance:tests.CalendarTest@6989da5e]" name="addInviteUser_Test" class="tests.CalendarTest"/>
+        <method signature="CalendarTest.removeInviteUser_Test()[pri:9, instance:tests.CalendarTest@6989da5e]" name="removeInviteUser_Test" class="tests.CalendarTest"/>
+      </group> <!-- Functional -->
+      <group name="Integration">
+        <method signature="ContactTest.createContactForOrganization_Test()[pri:3, instance:tests.ContactTest@139982de]" name="createContactForOrganization_Test" class="tests.ContactTest"/>
+        <method signature="CalendarTest.assignToAnotherUser_Test()[pri:7, instance:tests.CalendarTest@6989da5e]" name="assignToAnotherUser_Test" class="tests.CalendarTest"/>
+      </group> <!-- Integration -->
+      <group name="Negative">
+        <method signature="ContactTest.blankLastName_Test()[pri:2, instance:tests.ContactTest@139982de]" name="blankLastName_Test" class="tests.ContactTest"/>
+        <method signature="LoginTest.invalidLogin_Test()[pri:2, instance:tests.LoginTest@4c402120]" name="invalidLogin_Test" class="tests.LoginTest"/>
+        <method signature="LoginTest.blankUsername_Test()[pri:3, instance:tests.LoginTest@4c402120]" name="blankUsername_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.blankName_Test()[pri:3, instance:tests.OrganizationTest@385c9627]" name="blankName_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.blankEventName_Test()[pri:4, instance:tests.CalendarTest@6989da5e]" name="blankEventName_Test" class="tests.CalendarTest"/>
+        <method signature="LoginTest.blankPassword_Test()[pri:4, instance:tests.LoginTest@4c402120]" name="blankPassword_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.invalidEmail_Test()[pri:4, instance:tests.OrganizationTest@385c9627]" name="invalidEmail_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.pastStartDate_Test()[pri:5, instance:tests.CalendarTest@6989da5e]" name="pastStartDate_Test" class="tests.CalendarTest"/>
+        <method signature="OrganizationTest.deleteWithoutSelection_Test()[pri:6, instance:tests.OrganizationTest@385c9627]" name="deleteWithoutSelection_Test" class="tests.OrganizationTest"/>
+      </group> <!-- Negative -->
+      <group name="Positive">
+        <method signature="CalendarTest.calendarLoads_Test()[pri:1, instance:tests.CalendarTest@6989da5e]" name="calendarLoads_Test" class="tests.CalendarTest"/>
+        <method signature="ContactTest.listLoads_Test()[pri:1, instance:tests.ContactTest@139982de]" name="listLoads_Test" class="tests.ContactTest"/>
+        <method signature="HomePageTest.homePageLoads_Test()[pri:1, instance:tests.HomePageTest@3b69e7d1]" name="homePageLoads_Test" class="tests.HomePageTest"/>
+        <method signature="LoginTest.validLogin_Test()[pri:1, instance:tests.LoginTest@4c402120]" name="validLogin_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.listLoads_Test()[pri:1, instance:tests.OrganizationTest@385c9627]" name="listLoads_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.addMenuOptions_Test()[pri:2, instance:tests.CalendarTest@6989da5e]" name="addMenuOptions_Test" class="tests.CalendarTest"/>
+        <method signature="OrganizationTest.createValidOrg_Test()[pri:2, instance:tests.OrganizationTest@385c9627]" name="createValidOrg_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.createMeeting_Test()[pri:3, instance:tests.CalendarTest@6989da5e]" name="createMeeting_Test" class="tests.CalendarTest"/>
+        <method signature="ContactTest.createContactForOrganization_Test()[pri:3, instance:tests.ContactTest@139982de]" name="createContactForOrganization_Test" class="tests.ContactTest"/>
+        <method signature="ContactTest.massEditContact_Test()[pri:4, instance:tests.ContactTest@139982de]" name="massEditContact_Test" class="tests.ContactTest"/>
+        <method signature="ContactTest.sendMailToContact_Test()[pri:5, instance:tests.ContactTest@139982de]" name="sendMailToContact_Test" class="tests.ContactTest"/>
+        <method signature="LoginTest.logoutThenOpenHome_Test()[pri:5, instance:tests.LoginTest@4c402120]" name="logoutThenOpenHome_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.organizationLifecycle_Test()[pri:5, instance:tests.OrganizationTest@385c9627]" name="organizationLifecycle_Test" class="tests.OrganizationTest"/>
+        <method signature="CalendarTest.assignedToDefault_Test()[pri:6, instance:tests.CalendarTest@6989da5e]" name="assignedToDefault_Test" class="tests.CalendarTest"/>
+        <method signature="CalendarTest.assignToAnotherUser_Test()[pri:7, instance:tests.CalendarTest@6989da5e]" name="assignToAnotherUser_Test" class="tests.CalendarTest"/>
+        <method signature="CalendarTest.addInviteUser_Test()[pri:8, instance:tests.CalendarTest@6989da5e]" name="addInviteUser_Test" class="tests.CalendarTest"/>
+        <method signature="CalendarTest.removeInviteUser_Test()[pri:9, instance:tests.CalendarTest@6989da5e]" name="removeInviteUser_Test" class="tests.CalendarTest"/>
+      </group> <!-- Positive -->
+      <group name="Smoke">
+        <method signature="CalendarTest.calendarLoads_Test()[pri:1, instance:tests.CalendarTest@6989da5e]" name="calendarLoads_Test" class="tests.CalendarTest"/>
+        <method signature="ContactTest.listLoads_Test()[pri:1, instance:tests.ContactTest@139982de]" name="listLoads_Test" class="tests.ContactTest"/>
+        <method signature="HomePageTest.homePageLoads_Test()[pri:1, instance:tests.HomePageTest@3b69e7d1]" name="homePageLoads_Test" class="tests.HomePageTest"/>
+        <method signature="LoginTest.validLogin_Test()[pri:1, instance:tests.LoginTest@4c402120]" name="validLogin_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.listLoads_Test()[pri:1, instance:tests.OrganizationTest@385c9627]" name="listLoads_Test" class="tests.OrganizationTest"/>
+      </group> <!-- Smoke -->
+      <group name="System">
+        <method signature="LoginTest.logoutThenOpenHome_Test()[pri:5, instance:tests.LoginTest@4c402120]" name="logoutThenOpenHome_Test" class="tests.LoginTest"/>
+        <method signature="OrganizationTest.organizationLifecycle_Test()[pri:5, instance:tests.OrganizationTest@385c9627]" name="organizationLifecycle_Test" class="tests.OrganizationTest"/>
+      </group> <!-- System -->
+    </groups>
+    <test started-at="2026-10-22T19:47:39 IST" name="All Tests" finished-at="2026-10-22T19:59:38 IST" duration-ms="719359">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:47:39 IST" name="launchBrowser" finished-at="2026-10-22T19:47:41 IST" duration-ms="2716" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Browser opened: chrome]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:47:42 IST" name="login" finished-at="2026-10-22T19:48:44 IST" duration-ms="62562" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in to Vtiger]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:48:44 IST" name="prepareLoginPage" finished-at="2026-10-22T19:48:53 IST" duration-ms="9302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="validLogin_Test()[pri:1, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:48:53 IST" name="validLogin_Test" description="TC01 Login with valid credentials" finished-at="2026-10-22T19:49:23 IST" duration-ms="29295" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful with valid username and password]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- validLogin_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:23 IST" name="prepareLoginPage" finished-at="2026-10-22T19:49:32 IST" duration-ms="9421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="invalidLogin_Test()[pri:2, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:32 IST" name="invalidLogin_Test" description="TC02 Login with invalid username and password" finished-at="2026-10-22T19:49:39 IST" duration-ms="7097" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC02_InvalidLogin.png]]>
+            </line>
+            <line>
+              <![CDATA[Login not allowed for invalid username and password]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invalidLogin_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:39 IST" name="prepareLoginPage" finished-at="2026-10-22T19:49:39 IST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="blankUsername_Test()[pri:3, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:39 IST" name="blankUsername_Test" description="TC03 Login with blank username" finished-at="2026-10-22T19:49:44 IST" duration-ms="4531" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC03_BlankUsername.png]]>
+            </line>
+            <line>
+              <![CDATA[Login not allowed when username is blank]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- blankUsername_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:44 IST" name="prepareLoginPage" finished-at="2026-10-22T19:49:44 IST" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="blankPassword_Test()[pri:4, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:44 IST" name="blankPassword_Test" description="TC04 Login with blank password" finished-at="2026-10-22T19:49:48 IST" duration-ms="4310" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC04_BlankPassword.png]]>
+            </line>
+            <line>
+              <![CDATA[Login not allowed when password is blank]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- blankPassword_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:48 IST" name="prepareLoginPage" finished-at="2026-10-22T19:49:48 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="logoutThenOpenHome_Test()[pri:5, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:49:48 IST" name="logoutThenOpenHome_Test" description="TC05 Home page is not accessible after logout" finished-at="2026-10-22T19:50:49 IST" duration-ms="60383" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in]]>
+            </line>
+            <line>
+              <![CDATA[Logged out, Home page is not opened without login]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- logoutThenOpenHome_Test -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@4c402120]" started-at="2026-10-22T19:59:37 IST" name="closeBrowser" finished-at="2026-10-22T19:59:38 IST" duration-ms="734" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.ContactTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:56:46 IST" name="login" finished-at="2026-10-22T19:57:32 IST" duration-ms="45560" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in to Vtiger]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="listLoads_Test()[pri:1, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:32 IST" name="listLoads_Test" description="TC26 Contacts list page loads" finished-at="2026-10-22T19:57:36 IST" duration-ms="4383" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Contacts list opened]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- listLoads_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:32 IST" name="prepareLoginPage" finished-at="2026-10-22T19:57:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:36 IST" name="prepareLoginPage" finished-at="2026-10-22T19:57:36 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="blankLastName_Test()[pri:2, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:36 IST" name="blankLastName_Test" description="TC27 Create contact with blank last name" finished-at="2026-10-22T19:57:41 IST" duration-ms="5038" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Last Name cannot be empty]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC27_BlankLastName.png]]>
+            </line>
+            <line>
+              <![CDATA[Contact not created because the last name is blank]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- blankLastName_Test -->
+        <test-method signature="createContactForOrganization_Test()[pri:3, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:41 IST" name="createContactForOrganization_Test" description="TC28 Create contact for an organization" finished-at="2026-10-22T19:58:28 IST" duration-ms="46629" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Organization created: QA_Org_Contact_261612]]>
+            </line>
+            <line>
+              <![CDATA[Organization selected for the contact: QA_Org_Contact_261612]]>
+            </line>
+            <line>
+              <![CDATA[Contact created for the organization: QA_Contact_268084 -> QA_Org_Contact_261612]]>
+            </line>
+            <line>
+              <![CDATA[Contact found in the list with its organization name]]>
+            </line>
+            <line>
+              <![CDATA[Contact deleted: QA_Contact_268084]]>
+            </line>
+            <line>
+              <![CDATA[Organization deleted: QA_Org_Contact_261612]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createContactForOrganization_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:57:41 IST" name="prepareLoginPage" finished-at="2026-10-22T19:57:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="massEditContact_Test()[pri:4, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:58:28 IST" name="massEditContact_Test" description="TC29 Mass edit the title of a contact" finished-at="2026-10-22T19:59:02 IST" duration-ms="34026" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Contact created: QA_MassEdit_308304]]>
+            </line>
+            <line>
+              <![CDATA[Mass Edit popup opened]]>
+            </line>
+            <line>
+              <![CDATA[Title changed by mass edit to: Senior QA]]>
+            </line>
+            <line>
+              <![CDATA[Contact deleted: QA_MassEdit_308304]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- massEditContact_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:58:28 IST" name="prepareLoginPage" finished-at="2026-10-22T19:58:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:59:02 IST" name="prepareLoginPage" finished-at="2026-10-22T19:59:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="sendMailToContact_Test()[pri:5, instance:tests.ContactTest@139982de]" started-at="2026-10-22T19:59:02 IST" name="sendMailToContact_Test" description="TC30 Send mail to a contact" finished-at="2026-10-22T19:59:37 IST" duration-ms="35615" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Contact created: QA_Mail_342339]]>
+            </line>
+            <line>
+              <![CDATA[Select Email IDs popup opened]]>
+            </line>
+            <line>
+              <![CDATA[Compose E-Mail window opened]]>
+            </line>
+            <line>
+              <![CDATA[Mail subject typed: QA Test Mail]]>
+            </line>
+            <line>
+              <![CDATA[Contact deleted: QA_Mail_342339]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- sendMailToContact_Test -->
+      </class> <!-- tests.ContactTest -->
+      <class name="tests.HomePageTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.HomePageTest@3b69e7d1]" started-at="2026-10-22T19:50:49 IST" name="login" finished-at="2026-10-22T19:52:04 IST" duration-ms="75496" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in to Vtiger]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.HomePageTest@3b69e7d1]" started-at="2026-10-22T19:52:04 IST" name="prepareLoginPage" finished-at="2026-10-22T19:52:04 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="homePageLoads_Test()[pri:1, instance:tests.HomePageTest@3b69e7d1]" started-at="2026-10-22T19:52:04 IST" name="homePageLoads_Test" description="TC06 Home page loads after login" finished-at="2026-10-22T19:52:49 IST" duration-ms="44426" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Home page opened and menu is displayed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- homePageLoads_Test -->
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.CalendarTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:52:49 IST" name="login" finished-at="2026-10-22T19:53:37 IST" duration-ms="48511" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in to Vtiger]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="calendarLoads_Test()[pri:1, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:37 IST" name="calendarLoads_Test" description="TC11 Calendar page loads" finished-at="2026-10-22T19:53:41 IST" duration-ms="4315" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Calendar page opened]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- calendarLoads_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:37 IST" name="prepareLoginPage" finished-at="2026-10-22T19:53:37 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="addMenuOptions_Test()[pri:2, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:41 IST" name="addMenuOptions_Test" description="TC12 Add button shows Call, Meeting and To Do" finished-at="2026-10-22T19:53:46 IST" duration-ms="4584" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Add menu shows Call, Meeting and To Do]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addMenuOptions_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:41 IST" name="prepareLoginPage" finished-at="2026-10-22T19:53:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:46 IST" name="prepareLoginPage" finished-at="2026-10-22T19:53:46 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="createMeeting_Test()[pri:3, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:53:46 IST" name="createMeeting_Test" description="TC13 Create a Meeting event with valid data" finished-at="2026-10-22T19:54:01 IST" duration-ms="15329" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Meeting created: QA_Meeting_26567 on 2026-11-22]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createMeeting_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:01 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:01 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="blankEventName_Test()[pri:4, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:01 IST" name="blankEventName_Test" description="TC14 Save event with blank Event Name" finished-at="2026-10-22T19:54:07 IST" duration-ms="5315" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Missing Event Name]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC14_BlankEventName.png]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- blankEventName_Test -->
+        <test-method signature="pastStartDate_Test()[pri:5, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:07 IST" name="pastStartDate_Test" description="TC15 Planned event with a past start date" finished-at="2026-10-22T19:54:12 IST" duration-ms="5398" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Start Date & Time should be greater than or equal to Current date & time for Activities with status as Planned]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC15_PastStartDate.png]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- pastStartDate_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:07 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:07 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:12 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:12 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="assignedToDefault_Test()[pri:6, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:12 IST" name="assignedToDefault_Test" description="TC16 Assigned To is the logged in user by default" finished-at="2026-10-22T19:54:17 IST" duration-ms="4892" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Assigned To is the logged in user: ACOE Fireflink]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- assignedToDefault_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:17 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:17 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="assignToAnotherUser_Test()[pri:7, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:17 IST" name="assignToAnotherUser_Test" description="TC17 Create event assigned to another user" finished-at="2026-10-22T19:54:30 IST" duration-ms="12520" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Meeting QA_Assign_57516 assigned to user: Bill Gates]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- assignToAnotherUser_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:30 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:30 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="addInviteUser_Test()[pri:8, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:30 IST" name="addInviteUser_Test" description="TC18 Add a user in the Invite tab" finished-at="2026-10-22T19:54:38 IST" duration-ms="8130" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[User added in the Invite tab: Bill Gates]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addInviteUser_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:38 IST" name="prepareLoginPage" finished-at="2026-10-22T19:54:38 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="removeInviteUser_Test()[pri:9, instance:tests.CalendarTest@6989da5e]" started-at="2026-10-22T19:54:38 IST" name="removeInviteUser_Test" description="TC19 Remove a user from the Invite tab" finished-at="2026-10-22T19:54:46 IST" duration-ms="7915" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[User added in the Invite tab: Bill Gates]]>
+            </line>
+            <line>
+              <![CDATA[User removed from the Invite tab: Bill Gates]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- removeInviteUser_Test -->
+      </class> <!-- tests.CalendarTest -->
+      <class name="tests.OrganizationTest">
+        <test-method is-config="true" signature="login()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:54:46 IST" name="login" finished-at="2026-10-22T19:55:27 IST" duration-ms="41460" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged in to Vtiger]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="listLoads_Test()[pri:1, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:27 IST" name="listLoads_Test" description="TC20 Organizations list page loads" finished-at="2026-10-22T19:55:32 IST" duration-ms="4711" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Organizations list opened]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- listLoads_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:27 IST" name="prepareLoginPage" finished-at="2026-10-22T19:55:27 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:32 IST" name="prepareLoginPage" finished-at="2026-10-22T19:55:32 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="createValidOrg_Test()[pri:2, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:32 IST" name="createValidOrg_Test" description="TC21 Create organization with valid data" finished-at="2026-10-22T19:55:49 IST" duration-ms="16842" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Organization created with all details: QA_Org_Full_132264]]>
+            </line>
+            <line>
+              <![CDATA[Organization deleted: QA_Org_Full_132264]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- createValidOrg_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:49 IST" name="prepareLoginPage" finished-at="2026-10-22T19:55:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="blankName_Test()[pri:3, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:49 IST" name="blankName_Test" description="TC22 Create organization with blank name" finished-at="2026-10-22T19:55:54 IST" duration-ms="5011" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Organization Name cannot be empty]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC22_BlankOrgName.png]]>
+            </line>
+            <line>
+              <![CDATA[Organization not created because the name is blank]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- blankName_Test -->
+        <test-method signature="invalidEmail_Test()[pri:4, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:54 IST" name="invalidEmail_Test" description="TC23 Create organization with invalid email" finished-at="2026-10-22T19:55:59 IST" duration-ms="5143" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Please enter a valid Email (EMAIL)]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC23_InvalidOrgEmail.png]]>
+            </line>
+            <line>
+              <![CDATA[Organization not created because the email is invalid]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- invalidEmail_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:54 IST" name="prepareLoginPage" finished-at="2026-10-22T19:55:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="organizationLifecycle_Test()[pri:5, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:59 IST" name="organizationLifecycle_Test" description="TC24 Create, search, edit and delete an organization" finished-at="2026-10-22T19:56:41 IST" duration-ms="42314" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Organization created: QA_Org_Life_159264]]>
+            </line>
+            <line>
+              <![CDATA[Organization found in the list: QA_Org_Life_159264]]>
+            </line>
+            <line>
+              <![CDATA[Organization edited: QA_Org_Life_159264 changed to QA_Org_Life_159264_Edited]]>
+            </line>
+            <line>
+              <![CDATA[Edited organization found in the list: QA_Org_Life_159264_Edited]]>
+            </line>
+            <line>
+              <![CDATA[Organization deleted: QA_Org_Life_159264_Edited]]>
+            </line>
+            <line>
+              <![CDATA[Organization is no longer in the list]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- organizationLifecycle_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:55:59 IST" name="prepareLoginPage" finished-at="2026-10-22T19:55:59 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+        <test-method signature="deleteWithoutSelection_Test()[pri:6, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:56:41 IST" name="deleteWithoutSelection_Test" description="TC25 Click Delete without selecting a record" finished-at="2026-10-22T19:56:46 IST" duration-ms="5065" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Alert shown: Please select at least one entity]]>
+            </line>
+            <line>
+              <![CDATA[Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC25_DeleteWithoutSelection.png]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- deleteWithoutSelection_Test -->
+        <test-method is-config="true" signature="prepareLoginPage()[pri:0, instance:tests.OrganizationTest@385c9627]" started-at="2026-10-22T19:56:41 IST" name="prepareLoginPage" finished-at="2026-10-22T19:56:41 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareLoginPage -->
+      </class> <!-- tests.OrganizationTest -->
+    </test> <!-- All Tests -->
+  </suite> <!-- All Test Cases -->
+</testng-results>

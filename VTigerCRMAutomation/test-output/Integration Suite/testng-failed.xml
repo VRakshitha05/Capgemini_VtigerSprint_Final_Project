@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Integration Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Integration Tests(failed)">
+    <groups>
+      <run>
+        <include name="Integration"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.ContactTest">
+        <methods>
+          <include name="login"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="createContactForOrganization_Test"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.ContactTest -->
+      <class name="tests.CalendarTest">
+        <methods>
+          <include name="assignToAnotherUser_Test"/>
+          <include name="login"/>
+          <include name="launchBrowser"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.CalendarTest -->
+    </classes>
+  </test> <!-- Integration Tests(failed) -->
+</suite> <!-- Failed suite [Integration Suite] -->

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>TestNG:  Home Widget Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Home Widget Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Oct 22 18:51:31 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>228 seconds (228309 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.HomeWidgetTest.addDashboardWidget_Test()'><b>addDashboardWidget_Test</b><br>Test class: tests.HomeWidgetTest<br>Test method: TC08 Add Dashboard widget with valid title<br/>
+<a href="#Output-327170708" onClick='toggleBox("Output-327170708", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-327170708" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-327170708">
+Dashboard widget added: QA_Dashboard_99015<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>tests.HomeWidgetTest@206a70ef</td></tr>
+<tr>
+<td title='tests.HomeWidgetTest.addNotebookWidget_Test()'><b>addNotebookWidget_Test</b><br>Test class: tests.HomeWidgetTest<br>Test method: TC09 Add Notebook widget with valid title<br/>
+<a href="#Output-1017203956" onClick='toggleBox("Output-1017203956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1017203956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1017203956">
+Notebook widget added: QA_Notebook_41416<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>tests.HomeWidgetTest@206a70ef</td></tr>
+<tr>
+<td title='tests.HomeWidgetTest.dashboardWithoutTitle_Test()'><b>dashboardWithoutTitle_Test</b><br>Test class: tests.HomeWidgetTest<br>Test method: TC10 Add Dashboard widget with blank Window Title<br/>
+<a href="#Output-1427892726" onClick='toggleBox("Output-1427892726", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1427892726" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1427892726">
+Alert shown: Please enter Window Title.<br/>
+Screenshot saved: C:\Users\rithv\Downloads\CRMAutomationFramework\CRMAutomationFramework\screenshots\TC10_DashboardBlankTitle.png<br/>
+</div>
+</td>
+<td></td>
+<td>37</td>
+<td>tests.HomeWidgetTest@206a70ef</td></tr>
+<tr>
+<td title='tests.HomeWidgetTest.addModuleWidget_Test()'><b>addModuleWidget_Test</b><br>Test class: tests.HomeWidgetTest<br>Test method: TC07 Add Module widget with valid title<br/>
+<a href="#Output-1768639125" onClick='toggleBox("Output-1768639125", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1768639125" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1768639125">
+Module widget added: QA_ModuleWidget_55739<br/>
+</div>
+</td>
+<td></td>
+<td>46</td>
+<td>tests.HomeWidgetTest@206a70ef</td></tr>
+</table><p>
+</body>
+</html>

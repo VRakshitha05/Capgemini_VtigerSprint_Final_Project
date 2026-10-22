@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Home Widgets (run only when needed)]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" name="Home Widget Tests(failed)">
+    <classes>
+      <class name="tests.HomeWidgetTest">
+        <methods>
+          <include name="login"/>
+          <include name="addDashboardWidget_Test"/>
+          <include name="addNotebookWidget_Test"/>
+          <include name="launchBrowser"/>
+          <include name="addModuleWidget_Test"/>
+          <include name="prepareLoginPage"/>
+          <include name="closeBrowser"/>
+          <include name="dashboardWithoutTitle_Test"/>
+        </methods>
+      </class> <!-- tests.HomeWidgetTest -->
+    </classes>
+  </test> <!-- Home Widget Tests(failed) -->
+</suite> <!-- Failed suite [Home Widgets (run only when needed)] -->
